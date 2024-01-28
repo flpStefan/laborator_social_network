@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab7.gui.UserController">
+  <tabs>
+    <Tab text="Friends">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="friendListTable" layoutX="14.0" layoutY="93.0" prefHeight="330.0" prefWidth="360.0">
+                    <columns>
+                      <TableColumn fx:id="friendListLastNameColumn" prefWidth="75.0" text="Nume" />
+                      <TableColumn fx:id="friendListFirstNameColumn" prefWidth="75.0" text="Prenume" />
+                      <TableColumn fx:id="friendListEmailColumn" prefWidth="75.0" text="E-mail" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView fx:id="friendRequestTable" layoutX="400.0" layoutY="93.0" prefHeight="329.0" prefWidth="394.0">
+                    <columns>
+                      <TableColumn fx:id="friendRequestLastNameColumn" prefWidth="75.0" text="Nume" />
+                      <TableColumn fx:id="friendRequestFirstNameColumn" prefWidth="75.0" text="Prenume" />
+                      <TableColumn fx:id="friendRequestEmailColumn" prefWidth="75.0" text="E-mail" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Separator layoutX="385.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="580.0" prefWidth="0.0" />
+                  <ImageView fitHeight="87.0" fitWidth="79.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@photos/friendlist_logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="116.0" layoutY="24.0" prefHeight="59.0" prefWidth="231.0" text="Friend list:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="83.0" fitWidth="86.0" layoutX="400.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@photos/friendrequests_logo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="500.0" layoutY="10.0" prefHeight="87.0" prefWidth="365.0" text="Friend requests:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="505.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleAccept" prefHeight="26.0" prefWidth="208.0" text="Accept" />
+                  <Button layoutX="504.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleReject" prefHeight="26.0" prefWidth="210.0" text="Reject" />
+                  <Button fx:id="exitButton" layoutX="756.0" layoutY="540.0" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+                  <Button layoutX="38.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleSend" prefHeight="26.0" prefWidth="177.0" text="Send" />
+                  <Label layoutX="39.0" layoutY="466.0" text="Send friend request:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailText" layoutX="39.0" layoutY="491.0" prefHeight="26.0" prefWidth="175.0" promptText="E-mail" />
+                  <Button fx:id="previousButtonFriend" layoutX="28.0" layoutY="430.0" mnemonicParsing="false" onAction="#handlePreviousButtonFriend" text="Previous" />
+                  <Button fx:id="nextButtonFriend" layoutX="317.0" layoutY="430.0" mnemonicParsing="false" onAction="#handleNextButtonFriend" text="Next" />
+                  <Button fx:id="previousButtonFriendRequest" layoutX="416.0" layoutY="430.0" mnemonicParsing="false" onAction="#handlePreviousButtonFriendRequest" text="Previous" />
+                  <Button fx:id="nextButtonFriendRequest" layoutX="735.0" layoutY="430.0" mnemonicParsing="false" onAction="#handleNextButtonFriendRequest" text="Next" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="messageTab" text="Messages">
+      <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          <fx:include source="messages.fxml" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

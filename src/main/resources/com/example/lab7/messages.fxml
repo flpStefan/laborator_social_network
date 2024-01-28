@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="586.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab7.gui.MessageController">
+   <children>
+       <ListView fx:id="listFriends" layoutX="5.0" layoutY="44.0" onMousePressed="#handleSelect" prefHeight="457.0" prefWidth="203.0" />
+       <Label layoutX="44.0" layoutY="5.0" prefHeight="38.0" prefWidth="169.0" text="Available chats:">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font></Label>
+       <Button layoutX="295.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleSend" prefHeight="26.0" prefWidth="120.0" text="Send" />
+       <ListView fx:id="listMessages" layoutX="227.0" layoutY="-3.0" prefHeight="406.0" prefWidth="565.0" />
+       <Separator layoutX="211.0" layoutY="-16.0" orientation="VERTICAL" prefHeight="624.0" prefWidth="14.0" />
+       <Separator layoutX="217.0" layoutY="436.0" prefHeight="18.0" prefWidth="592.0" />
+       <Button fx:id="exitButton" layoutX="747.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+      <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@photos/chat_logo.jpg" />
+         </image></ImageView>
+      <TextField fx:id="messageText" alignment="TOP_LEFT" layoutX="239.0" layoutY="454.0" prefHeight="64.0" prefWidth="256.0" promptText="Message" />
+      <Button fx:id="previousButtonFriend" layoutX="14.0" layoutY="515.0" mnemonicParsing="false" onAction="#handlePreviousButtonFriend" text="Previous" />
+      <Button fx:id="nextButtonFriend" layoutX="154.0" layoutY="515.0" mnemonicParsing="false" onAction="#handleNextButtonFriend" text="Next" />
+      <Button fx:id="previousButtonMessage" layoutX="253.0" layoutY="410.0" mnemonicParsing="false" onAction="#handlePreviousButtonMessage" text="Previous" />
+      <Button fx:id="nextButtonMessage" layoutX="733.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleNextButtonMessage" text="Next" />
+   </children>
+</AnchorPane>
